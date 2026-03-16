@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">STUDENT_ID_CARD</string>
+    <string name="student_name">SSENTONGO JAMIRU</string>
+    <string name="programme">Bachelor of Computer Science</string>
+    <string name="reg_number">24/2/306/D/245</string>
+    <string name="date_of_issue">01/01/2023</string>
+    <string name="expiry_date">31/12/2026</string>
+</resources>
