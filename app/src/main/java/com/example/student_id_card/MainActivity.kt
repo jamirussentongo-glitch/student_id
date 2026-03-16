@@ -70,7 +70,7 @@ fun StudentInfo() {
                 painter = painterResource(id = R.drawable.ndejje_log),
                 contentDescription = "watermark",
                 modifier = Modifier
-                    .size(90.dp)
+                    .size(91 .dp)
                     .align(Alignment.CenterEnd)
                     .alpha(0.08f)
             )
