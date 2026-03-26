@@ -55,24 +55,28 @@ fun StudentInfo() {
         shape = RoundedCornerShape(8.dp),
         elevation = CardDefaults.elevatedCardElevation(defaultElevation = 8.dp)
     ) {
-        Box {
-            // Watermark logos
+        Box(modifier = Modifier.fillMaxSize()) {
+            // Watermark logos - Cut half way at the edges
+            val watermarkSize = 120.dp
+            
             Image(
                 painter = painterResource(id = R.drawable.ndejje_log),
-                contentDescription = "watermark",
+                contentDescription = null,
                 modifier = Modifier
-                    .size(90.dp)
+                    .size(watermarkSize)
                     .align(Alignment.CenterStart)
-                    .alpha(0.08f)
+                    .offset(x = -(watermarkSize / 2))
+                    .alpha(0.02f)
             )
 
             Image(
                 painter = painterResource(id = R.drawable.ndejje_log),
-                contentDescription = "watermark",
+                contentDescription = null,
                 modifier = Modifier
-                    .size(90.dp)
+                    .size(watermarkSize)
                     .align(Alignment.CenterEnd)
-                    .alpha(0.08f)
+                    .offset(x = (watermarkSize / 2))
+                    .alpha(0.05f)
             )
 
             Column {
@@ -137,7 +141,7 @@ fun StudentInfo() {
                     Row(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .padding(horizontal = 10.dp),
+                            .padding(horizontal = 12.dp),
                         horizontalArrangement = Arrangement.Center,
                         verticalAlignment = Alignment.CenterVertically
                     ) {
