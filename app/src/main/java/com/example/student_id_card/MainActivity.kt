@@ -56,7 +56,7 @@ fun StudentInfo() {
         elevation = CardDefaults.elevatedCardElevation(defaultElevation = 8.dp)
     ) {
         Box(modifier = Modifier.fillMaxSize()) {
-            // Watermark logos - Cut half way at the edges
+            // Watermark logos - Cugit t half way at the edges
             val watermarkSize = 120.dp
             
             Image(
