@@ -70,7 +70,7 @@ fun StudentInfo() {
                 painter = painterResource(id = R.drawable.ndejje_log),
                 contentDescription = "watermark",
                 modifier = Modifier
-                    .size(91 .dp)
+                    .size(90.dp)
                     .align(Alignment.CenterEnd)
                     .alpha(0.08f)
             )
@@ -123,7 +123,7 @@ fun StudentInfo() {
                     )
 
                     Text(
-                        text = stringResource(R.string.programme).uppercase(),
+                        text = "Programme: ${stringResource(R.string.programme).uppercase()}",
                         fontSize = 11.sp
                     )
 
@@ -132,29 +132,34 @@ fun StudentInfo() {
                         fontWeight = FontWeight.Bold
                     )
 
+                    Spacer(modifier = Modifier.height(4.dp))
+
                     Row(
                         modifier = Modifier
                             .fillMaxWidth()
                             .padding(horizontal = 10.dp),
-                        horizontalArrangement = Arrangement.SpaceBetween
+                        horizontalArrangement = Arrangement.Center,
+                        verticalAlignment = Alignment.CenterVertically
                     ) {
                         Text(
                             text = "Date of issue: ${stringResource(R.string.date_of_issue)}",
-                            style = MaterialTheme.typography.labelLarge,
-                            fontWeight = FontWeight.ExtraBold
+                            style = MaterialTheme.typography.labelSmall,
+                            fontWeight = FontWeight.Bold
                         )
+
+                        Spacer(modifier = Modifier.width(20.dp))
 
                         Text(
                             text = "Expiry date: ${stringResource(R.string.expiry_date)}",
-                            style = MaterialTheme.typography.labelLarge,
-                            fontWeight = FontWeight.ExtraBold
+                            style = MaterialTheme.typography.labelSmall,
+                            fontWeight = FontWeight.Bold
                         )
                     }
 
                     // Barcode
                     Row(
                         modifier = Modifier
-                            .padding(top = 4.dp)
+                            .padding(top = 8.dp)
                             .height(20.dp)
                             .fillMaxWidth(0.9f),
                         horizontalArrangement = Arrangement.Center
